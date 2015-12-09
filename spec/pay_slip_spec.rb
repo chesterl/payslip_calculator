@@ -13,11 +13,11 @@ describe Payslip do
 
   describe '#generate' do
     before :each do
-      @gross_income = class_double('GrossIncome').as_stubbed_const
-      @income_tax = class_double('IncomeTax').as_stubbed_const
-      @income_dbl = instance_double('IncomeTax')
-      @net_income = class_double('NetIncome').as_stubbed_const
-      @super_amount = class_double('SuperAmount').as_stubbed_const
+      @gross_income = class_double('Income::GrossIncome').as_stubbed_const
+      @income_tax = class_double('Tax::IncomeTax').as_stubbed_const
+      @income_dbl = instance_double('Tax::IncomeTax')
+      @net_income = class_double('Income::NetIncome').as_stubbed_const
+      @super_amount = class_double('Tax::SuperAmount').as_stubbed_const
       allow(@gross_income).to receive(:calculate).with(employee.salary) { 5000 }
       allow(@income_tax).to receive(:new).with(employee.salary).and_return(@income_dbl)
       allow(@income_dbl).to receive(:calculate).and_return(4000)

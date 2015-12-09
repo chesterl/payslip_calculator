@@ -10,10 +10,10 @@ class Payslip
   def generate
     @full_name = full_name
     @pay_period = employee_pay_period
-    @gross_income = GrossIncome.calculate(employee_salary)
-    @income_tax = IncomeTax.new(employee_salary).calculate
-    @net_income = NetIncome.calculate(gross_income, income_tax)
-    @super_amount = SuperAmount.calculate(gross_income, employee_super_rate)
+    @gross_income = Income::GrossIncome.calculate(employee_salary)
+    @income_tax = Tax::IncomeTax.new(employee_salary).calculate
+    @net_income = Income::NetIncome.calculate(gross_income, income_tax)
+    @super_amount = Tax::SuperAmount.calculate(gross_income, employee_super_rate)
   end
 
   def full_name

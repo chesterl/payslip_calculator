@@ -1,7 +1,7 @@
-describe IncomeTax do
+describe Tax::IncomeTax do
   describe '#calculate' do
     it 'calls methods to calculate income tax' do
-      income_tax = IncomeTax.new(50000)
+      income_tax = Tax::IncomeTax.new(50000)
 
       aggregate_failures do
         expect(income_tax).to receive(:monthly_income_tax)
@@ -14,7 +14,7 @@ describe IncomeTax do
 
   describe '#taxable_income' do
     before :each do
-      @taxable_income = IncomeTax.new(salary).taxable_income
+      @taxable_income = Tax::IncomeTax.new(salary).taxable_income
     end
 
     context '10,000 salary' do
@@ -132,14 +132,14 @@ describe IncomeTax do
 
   describe '#monthly_income_tax' do
     it 'calculates monthly tax on 50000' do
-      income_tax = IncomeTax.new(70000)
+      income_tax = Tax::IncomeTax.new(70000)
       result = income_tax.monthly_income_tax(50000)
 
       expect(result).to eq(4167)
     end
 
     it 'calculates monthly tax on 100,000.44' do
-      income_tax = IncomeTax.new(150000)
+      income_tax = Tax::IncomeTax.new(150000)
       result = income_tax.monthly_income_tax(100000.44)
 
       expect(result).to eq(8333)

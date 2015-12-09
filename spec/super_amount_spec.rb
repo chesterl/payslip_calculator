@@ -1,5 +1,7 @@
-describe SuperAmount do
-  let(:super_amount) { SuperAmount.calculate(gross_income, super_rate) }
+describe Tax::SuperAmount do
+  let(:super_amount) {
+    Tax::SuperAmount.calculate(gross_income, super_rate)
+  }
 
   describe '.calculate' do
     context '10% super rate' do

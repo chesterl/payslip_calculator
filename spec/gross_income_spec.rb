@@ -1,5 +1,5 @@
-describe GrossIncome do
-  subject { GrossIncome.calculate(salary) }
+describe Income::GrossIncome do
+  subject { Income::GrossIncome.calculate(salary) }
 
   describe '#calculate' do
     context '50,000 salary' do
