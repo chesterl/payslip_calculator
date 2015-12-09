@@ -1,35 +1,45 @@
 describe GrossIncome do
+  subject { GrossIncome.calculate(salary) }
 
   describe '#calculate' do
-    it 'calculates gross income for 50,000 salary' do
-      result = GrossIncome.calculate(50000)
+    context '50,000 salary' do
+      let(:salary) { 50000 }
 
-      expect(result).to eq(4167)
+      it 'returns gross income' do
+        expect(subject).to eq(4167)
+      end
     end
 
-    it 'calculates gross income for 60,000 salary' do
-      result = GrossIncome.calculate(60000)
+    context '60,000 salary' do
+      let(:salary) { 60000 }
 
-      expect(result).to eq(5000)
+      it 'returns gross income' do
+        expect(subject).to eq(5000)
+      end
     end
 
-    it 'calculates gross income for 10,000 salary' do
-      result = GrossIncome.calculate(10000)
+    context '10,000 salary' do
+      let(:salary) { 10000 }
 
-      expect(result).to eq(833)
+      it 'returns gross income' do
+        expect(subject).to eq(833)
+      end
     end
 
-    it 'calculates gross income for 145099.54 salary' do
-      result = GrossIncome.calculate(145999.99)
+    context '145099.99 salary' do
+      let(:salary) { 145099.99 }
 
-      expect(result).to eq(12167)
+      it 'returns gross income' do
+        expect(subject).to eq(12092)
+      end
     end
 
-    it 'calculates gross income for 0 salary' do
-      result = GrossIncome.calculate(0)
+    context '0 salary' do
+      let(:salary) { 0 }
 
-      expect(result).to eq(0)
+      it 'returns gross income' do
+        expect(subject).to eq(0)
+      end
     end
-
   end
 end

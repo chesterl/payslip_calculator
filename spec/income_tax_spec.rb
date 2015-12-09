@@ -1,5 +1,4 @@
 describe IncomeTax do
-
   describe '#calculate' do
     it 'calls methods to calculate income tax' do
       income_tax = IncomeTax.new(50000)
@@ -21,7 +20,7 @@ describe IncomeTax do
     context '10,000 salary' do
       let(:salary) { 10000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(0)
       end
     end
@@ -29,7 +28,7 @@ describe IncomeTax do
     context '15,000 salary' do
       let(:salary) { 15000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(0)
       end
     end
@@ -37,7 +36,7 @@ describe IncomeTax do
     context '18,200 salary' do
       let(:salary) { 18200 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(0)
       end
     end
@@ -45,7 +44,7 @@ describe IncomeTax do
     context '18,201 salary' do
       let(:salary) { 18201 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(0.19)
       end
     end
@@ -53,7 +52,7 @@ describe IncomeTax do
     context '22,000 salary' do
       let(:salary) { 22000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(722)
       end
     end
@@ -61,7 +60,7 @@ describe IncomeTax do
     context '37,000 salary' do
       let(:salary) { 37000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(3572)
       end
     end
@@ -69,7 +68,7 @@ describe IncomeTax do
     context '37,001 salary' do
       let(:salary) { 37001 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(3572.325)
       end
     end
@@ -77,7 +76,7 @@ describe IncomeTax do
     context '45,000 salary' do
       let(:salary) { 45000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(6172)
       end
     end
@@ -85,7 +84,7 @@ describe IncomeTax do
     context '60,000.50 salary' do
       let(:salary) { 60000.50 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(11047.1625)
       end
     end
@@ -93,7 +92,7 @@ describe IncomeTax do
     context '80,000 salary' do
       let(:salary) { 80000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(17547)
       end
     end
@@ -101,7 +100,7 @@ describe IncomeTax do
     context '150,000 salary' do
       let(:salary) { 155666 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(45543.42)
       end
     end
@@ -109,23 +108,23 @@ describe IncomeTax do
     context '180,000 salary' do
       let(:salary) { 180000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(54547)
       end
     end
 
-    context '180,001' do
+    context '180,001 salary' do
       let(:salary) { 180001 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(54547.45)
       end
     end
 
-    context '250,000' do
+    context '250,000 salary' do
       let(:salary) { 250000 }
 
-      it 'returns correct income tax' do
+      it 'returns income tax' do
         expect(@taxable_income).to eq(86047)
       end
     end

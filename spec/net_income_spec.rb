@@ -1,5 +1,4 @@
 describe NetIncome do
-
   let(:net_income) { NetIncome.calculate(gross_income, income_tax) }
 
   describe '.calculate' do
@@ -21,5 +20,4 @@ describe NetIncome do
       end
     end
   end
-
 end

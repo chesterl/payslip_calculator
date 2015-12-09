@@ -1,5 +1,4 @@
 describe SuperAmount do
-
   let(:super_amount) { SuperAmount.calculate(gross_income, super_rate) }
 
   describe '.calculate' do
@@ -43,5 +42,4 @@ describe SuperAmount do
       end
     end
   end
-
 end

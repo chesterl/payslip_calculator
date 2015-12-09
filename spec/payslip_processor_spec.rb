@@ -1,5 +1,4 @@
 describe PayslipProcessor do
-
   let(:payslip_processor) { PayslipProcessor.new }
   let(:employee_array) {
     [
@@ -40,6 +39,7 @@ describe PayslipProcessor do
       # Sample csv contains valid and invalid data
       it 'is not included in the array of employees' do
         result = payslip_processor.process_csv
+
         expect(result.count).to eq(3)
       end
     end

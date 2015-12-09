@@ -1,5 +1,4 @@
 describe Payslip do
-
  let(:employee) { Employee.new(attributes) }
  let(:attributes) {
    {
@@ -54,11 +53,10 @@ describe Payslip do
   end
 
   describe '#full_name' do
-    it 'creates full name attribute in payslip' do
+    it 'returns full name' do
       name = employee_payslip.full_name
 
       expect(name).to eq('Chester Lam')
     end
   end
-
 end

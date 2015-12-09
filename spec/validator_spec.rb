@@ -1,5 +1,4 @@
 describe Validator do
-
   let(:employee_info) {
     {
       first_name: first_name,
@@ -64,7 +63,6 @@ describe Validator do
           expect(subject).to be false
         end
       end
-
     end
   end
 end
