@@ -7,7 +7,7 @@ describe Payslip do
      last_name: 'Lam',
      salary: 65000,
      super_rate: 9,
-     payment_start: '01 March-31 March'
+     pay_period: '01 March-31 March'
    }
  }
   let(:employee_payslip) { Payslip.new(employee) }

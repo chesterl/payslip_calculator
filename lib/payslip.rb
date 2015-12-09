@@ -9,11 +9,11 @@ class Payslip
 
   def generate
     @full_name = full_name
-    @pay_period = payment_start
+    @pay_period = employee_pay_period
     @gross_income = GrossIncome.calculate(employee_salary)
     @income_tax = IncomeTax.new(employee_salary).calculate
     @net_income = NetIncome.calculate(gross_income, income_tax)
-    @super_amount = SuperAmount.calculate(gross_income, super_rate)
+    @super_amount = SuperAmount.calculate(gross_income, employee_super_rate)
   end
 
   def full_name
@@ -22,11 +22,11 @@ class Payslip
 
   private
 
-  def payment_start
-    employee.payment_start
+  def employee_pay_period
+    employee.pay_period
   end
 
-  def super_rate
+  def employee_super_rate
     employee.super_rate
   end
 

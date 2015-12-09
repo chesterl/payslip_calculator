@@ -6,14 +6,14 @@ describe Validator do
       last_name: last_name,
       salary: salary,
       super_rate: super_rate,
-      payment_period: payment_period
+      pay_period: pay_period
     }
   }
   let(:first_name) { 'Chester' }
   let(:last_name) { 'Lam' }
   let(:salary) { 65000 }
   let(:super_rate) { 9 }
-  let(:payment_period) { '01 March-31 March' }
+  let(:pay_period) { '01 March-31 March' }
 
   subject { Validator.valid?(employee_info) }
 
