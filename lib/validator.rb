@@ -16,10 +16,3 @@ class Validator
   end
 
 end
-
-
-
-
-
-
-

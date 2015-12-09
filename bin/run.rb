@@ -1,11 +1,8 @@
 require 'require_all'
-
 require_all 'lib'
 
 calculator = PayslipProcessor.new
-
 employees = calculator.process_csv
-
 payslips = calculator.create_payslips(employees)
 
 puts 'Name,Pay Period,Gross Income,Income Tax,Net Income,Super'

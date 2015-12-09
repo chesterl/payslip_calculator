@@ -39,4 +39,3 @@ class IncomeTax
   end
 
 end
-
